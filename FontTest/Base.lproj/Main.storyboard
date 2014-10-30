@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cHq-qi-c62">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kpR-IO-vFz">
+            <objects>
+                <navigationController id="cHq-qi-c62" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h1u-ZS-lCC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="eaL-GG-zNM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7YO-Qk-CMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="106"/>
+        </scene>
+        <!--Font Test-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Font Test" id="vXZ-lx-hvc" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNh-OQ-GOf">
+                                <rect key="frame" x="188" y="145" width="225" height="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
+                                <state key="normal" title="Load Font via Font Descriptor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mMA-jE-HSN" kind="show" identifier="ShowFontDescriptor" id="W9R-jp-BkR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rby-aD-77u">
+                                <rect key="frame" x="204" y="200" width="194" height="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
+                                <state key="normal" title="Load Font via Font Name">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mMA-jE-HSN" kind="show" identifier="ShowFontName" id="E1I-1b-6VS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="iNh-OQ-GOf" secondAttribute="centerX" id="37x-4D-Nyl"/>
+                            <constraint firstItem="iNh-OQ-GOf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="81" id="gHS-lZ-OAE"/>
+                            <constraint firstItem="rby-aD-77u" firstAttribute="top" secondItem="iNh-OQ-GOf" secondAttribute="bottom" constant="31" id="nyO-XN-6nO"/>
+                            <constraint firstItem="iNh-OQ-GOf" firstAttribute="centerX" secondItem="rby-aD-77u" secondAttribute="centerX" id="z9N-Yr-yss"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Font Test" id="zBp-Hb-Opi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="106"/>
+        </scene>
+        <!--Preview-->
+        <scene sceneID="1tg-8d-4RF">
+            <objects>
+                <viewController title="Preview" id="mMA-jE-HSN" customClass="PreviewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z1H-uc-l3r"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ug-1O-Qyd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0TJ-A3-xWa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The quick brown fox jumps over the lazy dog." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G73-WH-a8M">
+                                <rect key="frame" x="135" y="290" width="331" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSy-8Z-Gz5">
+                                <rect key="frame" x="277" y="318" width="46" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wSy-8Z-Gz5" firstAttribute="top" secondItem="G73-WH-a8M" secondAttribute="bottom" constant="8" id="KN9-og-Zel"/>
+                            <constraint firstItem="G73-WH-a8M" firstAttribute="centerX" secondItem="wSy-8Z-Gz5" secondAttribute="centerX" constant="0.5" id="TPU-f2-sc3"/>
+                            <constraint firstAttribute="centerX" secondItem="G73-WH-a8M" secondAttribute="centerX" id="oiN-DN-s8V"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="G73-WH-a8M" secondAttribute="trailing" id="wEP-Ii-ykF"/>
+                            <constraint firstAttribute="centerY" secondItem="G73-WH-a8M" secondAttribute="centerY" id="x2B-Th-qS4"/>
+                            <constraint firstItem="G73-WH-a8M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0TJ-A3-xWa" secondAttribute="leadingMargin" id="yol-Yk-Ger"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewLabel" destination="G73-WH-a8M" id="IQf-mh-bco"/>
+                        <outlet property="statusLabel" destination="wSy-8Z-Gz5" id="cKR-z8-CDf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5A4-Ak-s5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1439" y="106"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="W9R-jp-BkR"/>
+    </inferredMetricsTieBreakers>
+</document>
