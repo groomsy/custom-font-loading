@@ -19,3 +19,5 @@ I have noticed that this lag is not present if you load a custom font with this 
 ```
 UIFont *font = [UIFont fontWithName:fontName size:pointSize];
 ```
+
+This has been submitted to Apple as [rdar://18828662](rdar://18828662).
